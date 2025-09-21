@@ -22,6 +22,7 @@ class BlipCaptionSummaryLayer(tf.keras.layers.Layer):
 
 
     def process_image(self, image_path, task):
+        """A function to process an image and a task, and produce a caption or a summary """
         try:
             # image_path.numpy() convert the tensorflow tensor and converts into it's
             # equivalent numpy object. The result is a byte string, the decode("utf-8") converts
@@ -35,7 +36,7 @@ class BlipCaptionSummaryLayer(tf.keras.layers.Layer):
                 # Encourages the model to produce a simple, direct response
                 prompt = "This is an image of"
             else:
-                # Encourages a mode descriptive response
+                # Encourages the model to produce a more descriptive response
                 prompt = "This is a detailed image showing"
 
             # The processor takes our image, resizes it to the dimensions the BLIP model expects, normalizes
