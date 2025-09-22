@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+import tensorflow as tf
 
 # Class for visualization
 class visualization_utils_images:
@@ -47,4 +48,33 @@ class visualization_utils_images:
 
         # Show the image.
         plt.tight_layout()
+        plt.show()
+
+    def plot_image_with_caption_and_summary(self, image_path_str, captioning_layer):
+        """Plots  an image with the corresponding generated caption and summary."""
+        # Convert image_path and tasks into tensors for the Blip_layer
+        image_path_tensor = tf.constant(image_path_str)
+        task_caption_tensor = tf.constant("caption")
+        task_summary_tensor = tf.constant("summary")
+
+        # Return the caption and summary
+        caption_tensor = captioning_layer(image_path_tensor, task_caption_tensor)
+        summary_tensor = captioning_layer(image_path_tensor, task_summary_tensor)
+
+        # Decode them into human-readable text
+        caption = caption_tensor.numpy().decode("utf-8")
+        summary = summary_tensor.numpy().decode("utf-8")
+
+        # Define the title
+        title = (
+            f"Caption:\n{caption}\n\n"
+            f"Summary:\n{summary}"
+        )
+
+        # Define the plot.
+        plt.figure(figsize=(5, 5))
+        img = plt.imread(image_path_str)
+        plt.imshow(img)
+        plt.title(title, fontsize=8)
+        plt.axis("off")
         plt.show()
