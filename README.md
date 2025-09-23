@@ -7,7 +7,7 @@ BLIP transformer. First we classify an image of a damaged aircraft into one of t
 a dent or a crack, and then provide a caption and summary of the damage in natural language.
 
 ## How it works
-***
+
 ### Classification:
 For classification, I had to freeze the convolutional and pooling layers (the base)
 of the VGG16 model and remove the top. I then built a custom top that was appropriate
@@ -31,7 +31,7 @@ To visualize the captioning and summarization, I create a custom function
 an image file path, and an instance of the Blip layer and returns the image with the caption
 and summary as the title. An example output for an image was the following:
 
-$\hspace{9cm}$ <img src="img_1.png" width="300" alt="Image of a damaged plane.">
+$\hspace{7cm}$ <img src="img_1.png" width="300" alt="Image of a damaged plane.">
 
 ## Technologies Used
 
