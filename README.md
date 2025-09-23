@@ -17,7 +17,7 @@ for binary classification. Once the new model was trained, I created a custom fu
 the predicted label, and the true label of any number of images the user wants to test.
 An example output for 5 images was the following:
 
-<img src="img.png" width="500" alt="5 images of damaged planes">
+<img src="img.png" width="978" alt="5 images of damaged planes">
 
 ***
 
@@ -32,7 +32,7 @@ To visualize the captioning and summarization, I create a custom function
 an image file path, and an instance of the Blip layer and returns the image with the caption
 and summary as the title. An example output for an image was the following:
 
-$\hspace{3cm}$ <img src="img_1.png" width="300" alt="Image of a damaged plane.">
+$\hspace{6cm}$ <img src="img_1.png" width="300" alt="Image of a damaged plane.">
 
 ## Technologies Used
 
