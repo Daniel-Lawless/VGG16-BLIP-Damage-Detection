@@ -16,9 +16,11 @@ for binary classification. Once the new model was trained, I created a custom fu
 `test_model_on_image` in the class `visualization_utils_images` that displays the image(s),
 the predicted label, and the true label of any number of images the user wants to test.
 An example output for 5 images was the following:
-![img.png](img.png)
+
+<img src="img.png" width="500" alt="5 images of damaged planes">
 
 ***
+
 ### Captioning & Summarization:
 
 After the image has been classified, it can then be passed into the Blip layer. In this layer, 
@@ -30,7 +32,7 @@ To visualize the captioning and summarization, I create a custom function
 an image file path, and an instance of the Blip layer and returns the image with the caption
 and summary as the title. An example output for an image was the following:
 
-![img_2.png](img_2.png)
+$\hspace{3cm}$ <img src="img_1.png" width="300" alt="Image of a damaged plane.">
 
 ## Technologies Used
 
