@@ -17,7 +17,7 @@ for binary classification. Once the new model was trained, I created a custom fu
 the predicted label, and the true label of any number of images the user wants to test.
 An example output for 5 images was the following:
 
-<img src="img.png" width="1050" alt="5 images of damaged planes">#
+<img src="img.png" width="1050" alt="5 images of damaged planes">
 
 ***
 
